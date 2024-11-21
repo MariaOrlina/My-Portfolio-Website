@@ -9,7 +9,7 @@ import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import SkillSection from '../components/skills';
-import ExperienceSection from '../components/Experience';
+import ExperienceSection from '../components/Experience/index';
 import MyActivities from '../components/tabs';
 
 

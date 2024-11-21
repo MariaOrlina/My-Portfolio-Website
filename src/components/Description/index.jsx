@@ -51,7 +51,7 @@ export default function About() {
                         transition={{ duration: 0.5 }}
                     >
                         <Image
-                            src="https://raw.githubusercontent.com/MariaOrlina/portfolio-image/refs/heads/main/IMG_3041.jpeg"
+                            src="/images/IMG_3041.jpeg"
                             alt="About Image"
                             className={styles.aboutImage}
                             width={400} // Replace with the actual width of the image
