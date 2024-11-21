@@ -73,7 +73,7 @@ export default function MyActivities() {
           <div className={styles.cards}>
             <motion.div className={styles.card}>
               <FiBookOpen size={40} />
-              <h3>Certified in AWS, Azure, GCP & Terraform</h3>
+              <h3>Certified in AWS, Azure, GCP &amp; Terraform</h3>
               <p>Below are the certifications I have achieved along with links to verify them:</p>
               <ul className={styles.certificationList}>
                 <li>
@@ -111,7 +111,7 @@ export default function MyActivities() {
 
   return (
     <div className={styles.myActivities}>
-      <h2 className={styles.sectionTitle}>What I'm Up To</h2>
+      <h2 className={styles.sectionTitle}>What I&apos;m Up To</h2>
       <div className={styles.tabHeader}>
         {tabs.map((tab) => (
           <div

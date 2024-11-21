@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
@@ -14,7 +15,8 @@ export default function Index() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (isContactActive) setIsContactActive(false);
+    // Reset contact state when the pathname changes
+    setIsContactActive(false);
   }, [pathname]);
 
   useLayoutEffect(() => {
@@ -48,10 +50,8 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Navigation Links (moved closer to the left side) */}
-       <div className={styles.navigationLinks}>
-          
-        </div>
+        {/* Navigation Links */}
+        <div className={styles.navigationLinks}></div>
 
         {/* Right Side: GitHub Icon and "Contact Me" Button */}
         <div ref={button} className={styles.contactButtonContainer}>
@@ -60,7 +60,7 @@ export default function Index() {
           </a>
           <button
             onClick={() => {
-              setIsContactActive(!isContactActive);
+              setIsContactActive((prev) => !prev);
             }}
             className={styles.contactButton}
           >

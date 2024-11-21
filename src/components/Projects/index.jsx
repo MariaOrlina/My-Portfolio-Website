@@ -5,7 +5,7 @@ import Project from './components/project';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import Image from 'next/image';
-import Rounded from '../../common/RoundedButton';
+
 
 const projects = [
   {
@@ -85,9 +85,7 @@ export default function Home() {
         })
       }
     </div>
-    <Rounded>
-      <p>More work</p>
-    </Rounded>
+    
     <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
             <div style={{top: index * -100 + "%"}} className={styles.modalSlider}>

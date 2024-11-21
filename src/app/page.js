@@ -46,7 +46,6 @@ export default function Home() {
       <ExperienceSection />
       <SkillSection />
       <SlidingImages />
-      
       <Contact />
     </main>
   )

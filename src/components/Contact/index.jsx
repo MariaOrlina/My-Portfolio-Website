@@ -21,7 +21,7 @@ export default function ContactSection() {
 
     return (
         <motion.div style={{ y }} ref={container} className={styles.contact}>
-            <h2 className={styles.headline}>Let's Innovate Together</h2>
+            <h2 className={styles.headline}>Let&apos;s Innovate Together</h2>
             <div className={styles.splineWrapper}>
                 <Spline scene="https://prod.spline.design/at7sb7CuV13XBhrb/scene.splinecode" />
             </div>
