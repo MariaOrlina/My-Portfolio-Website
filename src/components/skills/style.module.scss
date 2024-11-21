@@ -1,0 +1,169 @@
+.skillsSection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    .sectionTitle {
+        position: absolute;
+        top: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+
+    .initialBox {
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        background: linear-gradient(135deg, #eaeaea, #f6f6f6); /* Subtle gradient for depth */
+        border-radius: 20px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Soft shadow for depth */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        z-index: 2;
+        border: 1px solid #dedede; /* Subtle border for a premium look */
+        overflow: hidden;
+    
+        h2 {
+            font-size: 1.4rem; /* Slightly larger font size */
+            font-weight: 600; /* Medium-bold font for prominence */
+            color: #444; /* Slightly darker neutral tone for contrast */
+            letter-spacing: 0.3px; /* Slight improvement in readability */
+            text-transform: uppercase; /* Modern typography style */
+        }
+    
+        /* Subtle hover effect with glow */
+        &:hover {
+            transform: translateY(-3px); /* Slight lift */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow for interaction */
+            background: linear-gradient(135deg, #f6f6f6, #eaeaea); /* Reverse gradient */
+        }
+    
+        /* Decorative corner elements for modern look */
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(200, 200, 200, 0.2); /* Translucent overlay */
+            transition: transform 0.5s ease;
+        }
+        &:before {
+            top: -50px;
+            left: -50px;
+        }
+        &:after {
+            bottom: -50px;
+            right: -50px;
+        }
+    
+        &:hover:before {
+            transform: translate(10px, 10px) scale(1.2); /* Subtle hover movement */
+        }
+        &:hover:after {
+            transform: translate(-10px, -10px) scale(1.2); /* Subtle hover movement */
+        }
+    }
+
+    .bubbleContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .skillBubble {
+        background-color: linear-gradient(135deg, #e66465, #9198e5);
+        border-radius: 50%;
+        padding: 20px;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(105, 153, 255, 0.5);
+        }
+    }
+
+    .skillDetail {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 80%;
+        max-width: 600px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 3;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0a0b0a;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .toolsList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+
+            .toolItem {
+                background-color: #f5f5f5;
+                padding: 5px 15px;
+                border-radius: 15px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                font-size: 0.9rem;
+                color: #333;
+            }
+        }
+
+        .closeButton { 
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #455ce9;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #334bd3;
+            }
+        }
+    }
+}

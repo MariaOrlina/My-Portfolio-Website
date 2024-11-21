@@ -1,0 +1,136 @@
+.header {
+  position: absolute;
+  display: flex;
+  z-index: 10; // Increased z-index for visibility
+  top: 0;
+  color: #333333; // Darker color for visibility
+  padding: 35px;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 300;
+  box-sizing: border-box;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    cursor: pointer;
+
+    p {
+      margin: 0px;
+      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    .name {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 5px;
+      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+      p {
+        position: relative;
+        color: #2f2d2d; // Adjust text color
+        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        &:nth-of-type(2) {
+          padding-left: 0.3em;
+        }
+        &:nth-of-type(3) {
+          position: absolute;
+          left: 120px;
+          padding-left: 0.3em;
+        }
+      }
+    }
+
+    &:hover {
+      .copyright {
+        transform: rotate(360deg);
+      }
+
+      .name {
+        padding-right: 30px;
+        .codeBy {
+          transform: translateX(-100%);
+        }
+        .maria {
+          transform: translateX(-65px);
+        }
+        .orlina {
+          transform: translateX(-65px);
+        }
+      }
+    }
+  }
+
+  .navigationLinks {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: 40px; // Adjusted to move closer to "Code by Maria Orlina"
+
+    a {
+      color: #000000; // Black text color for links
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #455ce9; // Purple color on hover
+      }
+    }
+  }
+
+  .contactButtonContainer {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    .githubIcon {
+      color: #333333; // Default color for GitHub icon
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #455ce9; // Purple on hover
+      }
+    }
+
+    .contactButton {
+      background: #1c1d20; // Darker button for contrast
+      border: 2px solid #ffffff;
+      padding: 12px 24px; // Increased size for prominence
+      color: #ffffff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 30px; // Slightly larger radius for a modern look
+      font-weight: bold;
+
+      &:hover {
+        background-color: #455ce9;
+        color: #bc80f0;
+        transform: scale(1.05); // Add slight scale effect on hover
+        box-shadow: 0 4px 10px rgba(69, 92, 233, 0.5); // Add shadow effect on hover
+      }
+    }
+  }
+}
+
+.contactOptions {
+  position: absolute;
+  top: 100px; // Increased distance between the "Contact Me" button and the icons for better spacing
+  right: 50px; // Match button position
+  display: flex;
+  gap: 20px; // Increased gap for more spacing between icons
+  z-index: 11; // Ensure the icons appear above other elements
+
+  a {
+    color: #444444; // Blackish-grey color for default state
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #455ce9; // Color change on hover for emphasis
+    }
+  }
+}

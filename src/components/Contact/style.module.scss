@@ -1,0 +1,107 @@
+.contact {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+
+    .headline {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: #ffffff;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .splineWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .watermarkCover {
+        position: absolute;
+        bottom: 10px; // Adjusted to align with the watermark
+        right: 10px;  // Adjusted to align with the watermark
+        width: 150px; // Width adjusted to cover watermark entirely
+        height: 60px; // Height adjusted for full coverage
+        background-color: #030202; // Match background color of .contact section
+        z-index: 2; // Ensure it appears above the Spline watermark
+        border-radius: 15px;
+    }
+
+    .body {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 20px;
+
+        .buttonContainer {
+            position: absolute;
+            top: 30px;
+            right: 90px;
+
+            .getInTouchButton {
+                width: 100px;
+                height: 100px;
+                background-color: #455CE9;
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+
+                p {
+                    margin: 0px;
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: #334BD3; // Slight color change on hover
+                }
+            }
+
+            .socialIcons {
+                margin-top: 30px;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+
+                a {
+                    color: #fff;
+                    font-size: 2rem;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #455CE9;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+.experienceEducationSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 50px;
+  background-color: #ffffff;
+  margin-bottom: 200px;
+  margin-top: 100px;
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2e2e2e;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .tabHeader {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px; // Increased margin to create gap between button and timeline
+
+    .tab {
+      cursor: pointer;
+      padding: 15px 30px; // Increased padding to make the buttons larger
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+
+      span {
+        font-size: 1.3rem; // Increased font size for better readability
+        color: #888;
+      }
+
+      &:hover {
+        border-bottom: 2px solid #455CE9;
+      }
+    }
+
+    .activeTab {
+      border-bottom: 2px solid #455CE9;
+
+      span {
+        color: #2e2e2e;
+      }
+    }
+  }
+
+  .timeline {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    padding: 50px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #455CE9;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  }
+
+  .timelineItemWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      .experienceItem {
+        margin-left: 30px;
+      }
+    }
+
+    &:nth-child(even) {
+      .experienceItem {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .experienceItem {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    z-index: 1;
+
+    display: flex;
+    align-items: flex-start;
+
+    .timelineMarker {
+      position: absolute;
+      left: -32px;
+      top: 16px;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: #455CE9;
+      z-index: 2;
+    }
+
+    .timelineContent {
+      padding-left: 40px;
+
+      h2 {
+        margin: 0;
+        font-size: 1.6rem;
+        color: #333;
+      }
+
+      h3 {
+        margin: 5px 0;
+        font-size: 1.2rem;
+        color: #555;
+      }
+
+      .duration {
+        font-size: 1rem;
+        color: #888;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #444;
+      }
+    }
+  }
+}
