@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
-import ExperienceItem from '../../components/experience/experience';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -49,6 +48,19 @@ const education = [
     description: "Focused on Computer Networks, Data Structures, and Database Management Systems.",
   },
 ];
+
+// ExperienceItem Component
+const ExperienceItem = ({ role, company, duration, description }) => (
+  <div className={styles.experienceItem}>
+    <div className={styles.timelineMarker}></div>
+    <div className={styles.timelineContent}>
+      <h2>{role}</h2>
+      <h3>{company}</h3>
+      <p className={styles.duration}>{duration}</p>
+      <p>{description}</p>
+    </div>
+  </div>
+);
 
 export default function ExperienceSection() {
   const [activeTab, setActiveTab] = useState('Experience');
