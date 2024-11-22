@@ -7,7 +7,7 @@
     background-color: #000000;
     position: relative;
     overflow: hidden;
-    height: 600px;
+    height: 600px; /* Base height */
 
     .headline {
         position: absolute;
@@ -37,12 +37,12 @@
 
     .watermarkCover {
         position: absolute;
-        bottom: 10px; // Adjusted to align with the watermark
-        right: 10px;  // Adjusted to align with the watermark
-        width: 150px; // Width adjusted to cover watermark entirely
-        height: 60px; // Height adjusted for full coverage
-        background-color: #030202; // Match background color of .contact section
-        z-index: 2; // Ensure it appears above the Spline watermark
+        bottom: 10px;
+        right: 10px;
+        width: 150px;
+        height: 60px;
+        background-color: #030202;
+        z-index: 2;
         border-radius: 15px;
     }
 
@@ -50,56 +50,116 @@
         position: relative;
         z-index: 1;
         width: 100%;
+        max-width: 1200px; /* Limit max width for large screens */
         height: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
 
-        .buttonContainer {
-            position: absolute;
-            top: 30px;
-            right: 90px;
+        // "Let's Innovate" Text
+        .leftText {
+            flex: 1;
+            text-align: left;
+            padding-left: 50px;
 
-            .getInTouchButton {
-                width: 100px;
-                height: 100px;
-                background-color: #455CE9;
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                transition: transform 0.3s ease, background-color 0.3s ease;
+            h2 {
+                font-size: 2.5rem; /* Default size */
+                font-weight: bold;
+                margin: 0;
+                background: linear-gradient(135deg, #b192e2, #604872); /* Gradient colors */
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
 
-                p {
-                    margin: 0px;
-                    font-size: 16px;
-                    font-weight: 300;
-                }
+        // Social Icons
+        .rightIcons {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            gap: 20px;
+
+            a {
+                color: rgb(181, 139, 213);
+                font-size: 2rem;
+                transition: color 0.3s ease;
 
                 &:hover {
-                    transform: scale(1.1);
-                    background-color: #334BD3; // Slight color change on hover
+                    color: #ffffff; /* Hover color */
+                }
+            }
+        }
+    }
+
+    // Responsive Styles
+    @media (max-width: 1024px) {
+        .body {
+            flex-direction: column; /* Stack left text and icons vertically */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+
+            .leftText {
+                text-align: center;
+                padding: 0;
+                margin-bottom: 20px;
+
+                h2 {
+                    font-size: 2rem; /* Reduce text size */
                 }
             }
 
-            .socialIcons {
-                margin-top: 30px;
-                display: flex;
-                gap: 20px;
+            .rightIcons {
                 justify-content: center;
+                padding: 0;
+                gap: 15px;
 
                 a {
-                    color: #fff;
-                    font-size: 2rem;
-                    transition: color 0.3s ease;
+                    font-size: 1.8rem; /* Adjust icon size */
+                }
+            }
+        }
+    }
 
-                    &:hover {
-                        color: #455CE9;
-                    }
+    @media (max-width: 768px) {
+        height: auto; /* Let the height adjust based on content */
+
+        .body {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+
+            .leftText h2 {
+                font-size: 1.8rem; /* Further reduce text size */
+            }
+
+            .rightIcons {
+                gap: 10px;
+
+                a {
+                    font-size: 1.5rem; /* Adjust icon size */
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .body {
+            padding: 10px;
+
+            .leftText h2 {
+                font-size: 1.5rem; /* Smallest text size */
+            }
+
+            .rightIcons {
+                gap: 8px;
+
+                a {
+                    font-size: 1.3rem; /* Adjust icon size for very small screens */
                 }
             }
         }

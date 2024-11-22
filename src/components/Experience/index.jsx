@@ -114,7 +114,7 @@ export default function ExperienceSection() {
 
   return (
     <div className={styles.experienceEducationSection}>
-      <h2 className={styles.sectionTitle}>My Journey So Far</h2>
+      <h2 className={styles.sectionTitle}>MY JOURNEY SO FAR</h2>
       <div className={styles.tabHeader}>
         {tabs.map((tab) => (
           <div

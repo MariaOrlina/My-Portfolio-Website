@@ -8,7 +8,7 @@ export default function MyActivities() {
 
   const tabs = [
     { name: 'Recent Articles', icon: <FiBookOpen /> },
-    { name: 'Coding Challenges Journey', icon: <FiCode /> },
+    { name: 'Coding Challenges', icon: <FiCode /> },
     { name: 'Open Source Contributions', icon: <FiGithub /> },
     { name: 'Cloud Projects', icon: <FiCloud /> },
     { name: 'Certifications', icon: <FiBookOpen /> },
@@ -20,7 +20,7 @@ export default function MyActivities() {
         return (
           <div className={styles.cards}>
             <motion.div className={styles.card}>
-              <FiBookOpen size={40} />
+              <FiBookOpen size={40} color='black'/>
               <h3>Seamless Data Resilience on AWS: Efficient Cross-Region Replication and Disaster Recovery</h3>
               <p></p>
               <a href="https://medium.com/@mariaorlina9901" target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@ export default function MyActivities() {
         return (
           <div className={styles.cards}>
             <motion.div className={styles.card}>
-              <FiCode size={40} />
+              <FiCode size={40} color='black' />
               <h3>LeetCode Challenges</h3>
               <p></p>
               <a href="https://leetcode.com/u/Maria_Orlina9901/" target="_blank" rel="noopener noreferrer">
@@ -46,7 +46,7 @@ export default function MyActivities() {
         return (
           <div className={styles.cards}>
             <motion.div className={styles.card}>
-              <FiGithub size={40} />
+              <FiGithub size={40} color='black'/>
               <h3>GitHub Contributions</h3>
               <p>Contributed to several open-source projects, including React libraries and AWS tooling.</p>
               <a href="https://github.com/MariaOrlina" target="_blank" rel="noopener noreferrer">
@@ -59,7 +59,7 @@ export default function MyActivities() {
         return (
           <div className={styles.cards}>
             <motion.div className={styles.card}>
-              <FiCloud size={40} />
+              <FiCloud size={40} color='black'/>
               <h3>Project: AWS Lambda Automation</h3>
               <p>Built a serverless cloud function to automate data processing tasks.</p>
               <a href="https://github.com/MariaOrlina/Cloud-Portfolio" target="_blank" rel="noopener noreferrer">
@@ -72,7 +72,7 @@ export default function MyActivities() {
         return (
           <div className={styles.cards}>
             <motion.div className={styles.card}>
-              <FiBookOpen size={40} />
+              <FiBookOpen size={40} color='black'/>
               <h3>Certified in AWS, Azure, GCP &amp; Terraform</h3>
               <p>Below are the certifications I have achieved along with links to verify them:</p>
               <ul className={styles.certificationList}>
@@ -97,7 +97,9 @@ export default function MyActivities() {
                   </a>
                 </li>
                 <li>
+                  <p>
                   Terraform Associate (in progress)
+                  </p>
                 </li>
               </ul>
             </motion.div>
@@ -111,7 +113,7 @@ export default function MyActivities() {
 
   return (
     <div className={styles.myActivities}>
-      <h2 className={styles.sectionTitle}>What I&apos;m Up To</h2>
+      <h2 className={styles.sectionTitle}>WHAT I&apos;M UP TO</h2>
       <div className={styles.tabHeader}>
         {tabs.map((tab) => (
           <div

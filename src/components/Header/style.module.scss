@@ -92,7 +92,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: #455ce9; // Purple on hover
+        color: #a850eb; // Purple on hover
       }
     }
 
@@ -108,10 +108,10 @@
       font-weight: bold;
 
       &:hover {
-        background-color: #455ce9;
-        color: #bc80f0;
+        background-color: #a784cc;
+        color: #100e13;
         transform: scale(1.05); // Add slight scale effect on hover
-        box-shadow: 0 4px 10px rgba(69, 92, 233, 0.5); // Add shadow effect on hover
+        box-shadow: 0 4px 10px rgba(166, 145, 186, 0.5); // Add shadow effect on hover
       }
     }
   }
@@ -130,7 +130,7 @@
     transition: color 0.3s ease;
 
     &:hover {
-      color: #455ce9; // Color change on hover for emphasis
+      color: #8757ae; // Color change on hover for emphasis
     }
   }
 }

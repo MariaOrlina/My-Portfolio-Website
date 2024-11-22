@@ -20,7 +20,7 @@
         position: absolute;
         width: 300px;
         height: 200px;
-        background: linear-gradient(135deg, #eaeaea, #f6f6f6); /* Subtle gradient for depth */
+        background: linear-gradient(135deg, #b192e2, #c09cdb); /* Subtle gradient for depth */
         border-radius: 20px;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Soft shadow for depth */
         display: flex;
@@ -45,7 +45,7 @@
         &:hover {
             transform: translateY(-3px); /* Slight lift */
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow for interaction */
-            background: linear-gradient(135deg, #f6f6f6, #eaeaea); /* Reverse gradient */
+            /*background: linear-gradient(135deg, #f6f6f6, #71428f); /* Reverse gradient */
         }
     
         /* Decorative corner elements for modern look */

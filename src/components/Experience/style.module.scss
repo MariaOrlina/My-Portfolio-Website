@@ -4,14 +4,14 @@
   align-items: center;
   padding: 150px 50px;
   background-color: #ffffff;
-  margin-bottom: 200px;
-  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-top: 60px;
 
   .sectionTitle {
     font-size: 2.5rem;
     font-weight: bold;
     color: #2e2e2e;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
   }
 
@@ -21,33 +21,51 @@
     width: 100%;
     max-width: 800px;
     margin-bottom: 40px; // Increased margin to create gap between button and timeline
+    gap: 20px; // Added spacing between tabs
 
     .tab {
       cursor: pointer;
-      padding: 15px 30px; // Increased padding to make the buttons larger
+      padding: 12px 25px;
       display: flex;
       align-items: center;
       gap: 10px;
-      border-bottom: 2px solid transparent;
+      border: none;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #b192e2, #604872); // Gradient background
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2); // Subtle 3D effect
       transition: all 0.3s ease;
-      border-radius: 10px;
-
-      span {
-        font-size: 1.3rem; // Increased font size for better readability
-        color: #888;
-      }
+      position: relative; // For glow effect
 
       &:hover {
-        border-bottom: 2px solid #455CE9;
+        transform: translateY(-3px); // Lift on hover
+        box-shadow: 0 8px 15px rgba(96, 72, 114, 0.6); // Stronger shadow on hover
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border-radius: 18px;
+        background: rgba(96, 72, 114, 0.4); // Glow effect
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover::after {
+        opacity: 1;
       }
     }
 
     .activeTab {
-      border-bottom: 2px solid #455CE9;
-
-      span {
-        color: #2e2e2e;
-      }
+      background: linear-gradient(135deg, #2a1152, #899FFD); // Distinct gradient for active tab
+      box-shadow: 0 6px 12px rgba(96, 72, 114, 0.5); // Stronger shadow
+      transform: translateY(-2px); // Slight lift
     }
   }
 
@@ -94,9 +112,9 @@
 
   .experienceItem {
     position: relative;
-    background: white;
+    background: #f5f5f5;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); // Stronger shadow
     padding: 20px;
     max-width: 400px;
     width: 100%;

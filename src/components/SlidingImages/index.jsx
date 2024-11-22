@@ -7,6 +7,55 @@ import { FiArrowRight, FiArrowLeft } from 'react-icons/fi'; // Right arrow icon
 
 const projects = [
     {
+        title: "SocialMediaPlatform",
+        src: "socialmediaplatform.jpg",
+        description: "A social media platform to enable users to interact and share content.",
+        tools: "JavaScript, Node.js, MongoDB",
+        github: "https://github.com/MariaOrlina/SocialMediaPlatform"
+    },
+    {
+        title: "InventoryManagementSystem",
+        src: "inventory-managment.jpg",
+        description: "Cloud-based system to manage inventory, purchase orders, and point-of-sale processes.",
+        tools: "Java, Spring Boot, Hibernate, Azure",
+        github: "https://github.com/MariaOrlina/InventoryManagementSystem"
+    },
+    {
+        title: "Geospatial-Crime-Mapping-and-Analysis-Platform",
+        src: "Geospatial.jpg",
+        description: "Platform for mapping and analyzing crime data using geospatial analysis.",
+        tools: "Python, Jupyter Notebook, GIS Tools",
+        github: "https://github.com/MariaOrlina/Geospatial-Crime-Mapping-and-Analysis-Platform"
+    },
+    {
+        title: "Blogging-Platform",
+        src: "Bloggin-platform.jpg",
+        description: "A blogging platform allowing users to create, edit, and share posts.",
+        tools: "JavaScript, Express.js, MongoDB",
+        github: "https://github.com/MariaOrlina/Blogging-Platform"
+    },
+    {
+        title: "University-Blogging-Platform",
+        src: "University-bloggin-platform.jpg",
+        description: "Platform to streamline communication within a university, promoting knowledge sharing.",
+        tools: "JavaScript, React, Node.js",
+        github: "https://github.com/MariaOrlina/University-Blogging-Platform"
+    },
+    {
+        title: "Database-Management",
+        src: "database-management.jpg",
+        description: "A project for learning and implementing database management systems.",
+        tools: "MySQL, PostgreSQL",
+        github: "https://github.com/MariaOrlina/Database-Management"
+    },
+    {
+        title: "Music Therapy Treatment Based on Emotion Detection",
+        src: "music-thereapy.jpg",
+        description: "This project proposes a system that detects a person's mood through facial emotion recognition using convolutional neural networks and generates a music playlist based on the detected mood. Unlike humans, machines find detecting facial expressions to be a challenging task. ",
+        tools: "MySQL, PostgreSQL",
+        github: "https://github.com/MariaOrlina/MusicTherapyTreatment_EmotionDetection"
+    },
+    {
         title: "FitCheck-AI-Powered-Fitness-and-Dining-Recommendations",
         src: "c2.png",
         description: "AI-powered app that provides personalized fitness and dining recommendations.",
@@ -55,55 +104,7 @@ const projects = [
         tools: "Python, Pandas, Matplotlib",
         github: "https://github.com/MariaOrlina/PolarIceCaps"
     },
-    {
-        title: "SocialMediaPlatform",
-        src: "socialmediaplatform.jpg",
-        description: "A social media platform to enable users to interact and share content.",
-        tools: "JavaScript, Node.js, MongoDB",
-        github: "https://github.com/MariaOrlina/SocialMediaPlatform"
-    },
-    {
-        title: "InventoryManagementSystem",
-        src: "inventory-managment.jpg",
-        description: "Cloud-based system to manage inventory, purchase orders, and point-of-sale processes.",
-        tools: "Java, Spring Boot, Hibernate, Azure",
-        github: "https://github.com/MariaOrlina/InventoryManagementSystem"
-    },
-    {
-        title: "Geospatial-Crime-Mapping-and-Analysis-Platform",
-        src: "Geospatial.jpg",
-        description: "Platform for mapping and analyzing crime data using geospatial analysis.",
-        tools: "Python, Jupyter Notebook, GIS Tools",
-        github: "https://github.com/MariaOrlina/Geospatial-Crime-Mapping-and-Analysis-Platform"
-    },
-    {
-        title: "Blogging-Platform",
-        src: "Bloggin-platform.jpg",
-        description: "A blogging platform allowing users to create, edit, and share posts.",
-        tools: "JavaScript, Express.js, MongoDB",
-        github: "https://github.com/MariaOrlina/Blogging-Platform"
-    },
-    {
-        title: "University-Blogging-Platform",
-        src: "University-bloggin-platform.jpg",
-        description: "Platform to streamline communication within a university, promoting knowledge sharing.",
-        tools: "JavaScript, React, Node.js",
-        github: "https://github.com/MariaOrlina/University-Blogging-Platform"
-    },
-    {
-        title: "Database-Management",
-        src: "database-management.jpg",
-        description: "A project for learning and implementing database management systems.",
-        tools: "MySQL, PostgreSQL",
-        github: "https://github.com/MariaOrlina/Database-Management"
-    },
-    {
-        title: "Music Therapy Treatment Based on Emotion Detection",
-        src: "music-thereapy.jpg",
-        description: "This project proposes a system that detects a person's mood through facial emotion recognition using convolutional neural networks and generates a music playlist based on the detected mood. Unlike humans, machines find detecting facial expressions to be a challenging task. ",
-        tools: "MySQL, PostgreSQL",
-        github: "https://github.com/MariaOrlina/MusicTherapyTreatment_EmotionDetection"
-    }
+    
 ];
 
 export default function SlidingImages() {
@@ -135,7 +136,7 @@ export default function SlidingImages() {
     return (
         <div ref={container} className={styles.slidingImages}>
             <div className={styles.title}>
-               
+            <h2 className={styles.title}>PROJECTS SLIDESHOW</h2>
             </div>
             <motion.div ref={sliderRef} style={{ x: x1 }} className={styles.slider}>
                 {projects.map((project, index) => (

@@ -63,7 +63,7 @@ export default function SkillSection() {
     return (
         <section className={styles.skillsSection}>
 
-            <h1 className={styles.sectionTitle}>Projects Driven by Skills</h1>
+            
             {/* Initial Box */}
             <motion.div
                 className={styles.initialBox}

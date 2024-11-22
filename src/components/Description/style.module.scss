@@ -1,114 +1,110 @@
 .description {
     padding: 200px;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #ffffff, #ffffff);  // Gradient background from white to light gray
+    background: linear-gradient(to bottom, #ffffff, #ffffff); // Gradient background
     font-family: 'Lato', sans-serif;
-    
+
+    .title {
+        text-align: center;
+        font-size: 2.5rem; // Increased font size for better visibility
+        font-weight: bold;
+        margin-bottom: 50px;
+        color: #333;
+    }
 
     .body {
         max-width: 1400px;
         display: flex;
         gap: 50px;
-        position: relative;
+        justify-content: center;
+        align-items: center;
 
-         .textContent,
-        .imageGrid { // Apply similar flex properties to both text and image
+        // Ensure the textContent and imageGrid always have the same size
+        .textContent,
+        .imageGrid {
             flex: 1;
-            width: 50%; // Both should take up equal width
-            height: auto; // Ensures height adjusts proportionally
-        }
-
-        .textContent {
+            width: 500px; // Slightly increased size
+            height: 400px; // Matches the aspect ratio of 5:4
             background-color: #f5f5f5;
-            padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex; // To align children vertically
-            flex-direction: column;
-            justify-content: center;
-            p {
-                margin: 0px;
-                margin-top: 30px;
-
-                &:nth-of-type(1) {
-                    font-size: 23px;
-                    gap: 8px;
-                    line-height: 1.5;
-                    span {
-                        margin-right: 3px;
-                    }
-                    .mask {
-                        position: relative;
-                        overflow: hidden;
-                        display: inline-flex;
-                    }
-                }
-                &:nth-of-type(2) {
-                    margin-top: 20px;
-                    font-size: 20px;
-                    width: 80%;
-                    font-weight: 300;
-                }
-            }
-        }
-
-        .button {
-            position: absolute;
-            right: -220px;  
-            top: 80%;
-            width: 180px;
-            height: 180px;
-            background-color: #1C1D20;
-            color: white;
-            border-radius: 50%;
-            position: absolute;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-
-            p {
-                margin: 0px;
-                font-size: 16px;
-                font-weight: 300;
-                position: relative;
-                z-index: 1;
-            }
         }
 
-        .imageGrid {
+        .textContent {
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 500px; // Match the image size
+            height: 400px; // Match the image size
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 45%;  // Takes up half of the section for the image grid
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        
+            p {
+                margin: 0; // Remove default margins
+                font-size: 1.1rem; // Font size for readability
+                line-height: 1.5; // Space between lines
+                text-align: justify; // Justify the paragraph text
+                word-wrap: break-word; // Ensure words break properly
+            }
+        }
+        
+        
 
+        .imageGrid {
             .imageWrapper {
-                flex: 1 1 calc(48% - 20px);
-                overflow: hidden;
-                transition: transform 0.5s;
-
+                width: 100%;
+                height: 100%;
                 img {
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                     object-fit: cover;
-                    transition: transform 0.5s ease;
-                    border-radius: 20px; 
-                }
-
-                &:hover img {
-                    transform: scale(1.1) rotate(5deg);  // Slightly scale and rotate the image on hover
+                    border-radius: 20px;
                 }
             }
         }
     }
 
-    .moreWork {
-        padding: 20px;
-        border-radius: 40px;
-        border: 1px solid grey;
+    // Responsive styles
+    @media (max-width: 1024px) {
+        .body {
+            flex-direction: column; // Stack text and image vertically
+            gap: 20px;
+
+            .textContent,
+            .imageGrid {
+                width: 90%; // Reduce size for smaller screens
+                max-width: 400px;
+                height: auto; // Maintain aspect ratio
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .body {
+            .textContent,
+            .imageGrid {
+                width: 100%; // Use full width on very small screens
+                height: auto;
+            }
+
+            .textContent {
+                padding: 20px;
+                p {
+                    font-size: 1rem; // Slightly smaller text for smaller screens
+                }
+            }
+        }
     }
 }
