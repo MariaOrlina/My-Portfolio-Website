@@ -7,11 +7,11 @@ export default function MyActivities() {
   const [activeTab, setActiveTab] = useState('Open Source Contributions');
 
   const tabs = [
+    { name: 'Certifications', icon: <FiBookOpen /> },
     { name: 'Recent Articles', icon: <FiBookOpen /> },
     { name: 'Coding Challenges', icon: <FiCode /> },
     { name: 'Open Source Contributions', icon: <FiGithub /> },
     { name: 'Cloud Projects', icon: <FiCloud /> },
-    { name: 'Certifications', icon: <FiBookOpen /> },
   ];
 
   const renderContent = () => {
@@ -29,7 +29,7 @@ export default function MyActivities() {
             </motion.div>
           </div>
         );
-        case 'Coding Challenges Journey':
+        case 'Coding Challenges':
         return (
           <div className={styles.cards}>
             <motion.div className={styles.card}>

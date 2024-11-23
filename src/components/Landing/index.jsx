@@ -70,7 +70,7 @@ export default function Home() {
       {/* Conditionally render the Spline component only on the client side */}
       {isClient && (
         <div className={styles.splineWrapper}>
-          <Spline scene="https://prod.spline.design/FnCqNZgKjMJLXkdX/scene.splinecode" />
+          <Spline scene="https://prod.spline.design/zPc61zSseXUVXuVp/scene.splinecode" />
         </div>
       )}
       {/* Watermark Cover */}
