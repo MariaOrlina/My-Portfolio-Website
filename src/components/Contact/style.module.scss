@@ -7,7 +7,7 @@
     background-color: #000000;
     position: relative;
     overflow: hidden;
-    height: 600px; /* Base height */
+    height: 600px; /* Default height */
 
     .headline {
         position: absolute;
@@ -50,24 +50,23 @@
         position: relative;
         z-index: 1;
         width: 100%;
-        max-width: 1200px; /* Limit max width for large screens */
+        max-width: 1200px;
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
 
-        // "Let's Innovate" Text
         .leftText {
             flex: 1;
             text-align: left;
             padding-left: 50px;
 
             h2 {
-                font-size: 2.5rem; /* Default size */
+                font-size: 2.5rem;
                 font-weight: bold;
                 margin: 0;
-                background: linear-gradient(135deg, #b192e2, #604872); /* Gradient colors */
+                background: linear-gradient(135deg, #b192e2, #604872);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -75,7 +74,6 @@
             }
         }
 
-        // Social Icons
         .rightIcons {
             flex: 1;
             display: flex;
@@ -89,16 +87,22 @@
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: #ffffff; /* Hover color */
+                    color: #ffffff;
                 }
             }
         }
     }
 
-    // Responsive Styles
+    /* Responsive Styles */
     @media (max-width: 1024px) {
+        height: auto; /* Adjust height for content */
+
+        .splineWrapper {
+            height: 70%; /* Limit Spline height */
+        }
+
         .body {
-            flex-direction: column; /* Stack left text and icons vertically */
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
@@ -126,7 +130,11 @@
     }
 
     @media (max-width: 768px) {
-        height: auto; /* Let the height adjust based on content */
+        height: auto;
+
+        .splineWrapper {
+            height: 60%; /* Adjust for smaller screens */
+        }
 
         .body {
             flex-direction: column;
@@ -134,20 +142,26 @@
             padding: 10px;
 
             .leftText h2 {
-                font-size: 1.8rem; /* Further reduce text size */
+                font-size: 1.8rem; /* Reduce text size further */
             }
 
             .rightIcons {
                 gap: 10px;
 
                 a {
-                    font-size: 1.5rem; /* Adjust icon size */
+                    font-size: 1.5rem; /* Adjust icon size further */
                 }
             }
         }
     }
 
     @media (max-width: 480px) {
+        height: auto;
+
+        .splineWrapper {
+            height: 50%; /* Adjust height for very small screens */
+        }
+
         .body {
             padding: 10px;
 
@@ -159,7 +173,7 @@
                 gap: 8px;
 
                 a {
-                    font-size: 1.3rem; /* Adjust icon size for very small screens */
+                    font-size: 1.3rem; /* Adjust icon size */
                 }
             }
         }

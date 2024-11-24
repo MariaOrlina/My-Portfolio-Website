@@ -40,6 +40,12 @@
         z-index: 2;
         border: 1px solid #dedede; /* Subtle border for a premium look */
         overflow: hidden;
+
+        &:hover {
+            transform: translateY(-3px); /* Slight lift */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow for interaction */
+            //background: linear-gradient(135deg, #f6f6f6, #71428f); /* Reverse gradient */
+        }
     
         h2 {
             font-size: 1.4rem; /* Slightly larger font size */
@@ -47,22 +53,22 @@
             color: #444; /* Slightly darker neutral tone for contrast */
             letter-spacing: 0.3px; /* Slight improvement in readability */
             text-transform: uppercase; /* Modern typography style */
-
-            @media (max-width: 768px) {
-                font-size: 1.2rem; // Smaller text for tablets
-              }
-        
-              @media (max-width: 480px) {
-                font-size: 1rem; // Even smaller text for mobile
-              }
         }
+
+        /* Adjust size only for mobile layouts */
+        @media (max-width: 768px) {
+            width: 40%; // Dynamically adjusts to 40% of viewport width
+            height: 20vh; // Dynamically adjusts to 20% of viewport height
+          }
+        
+        @media (max-width: 480px) {
+            width: 60%; // Dynamically adjusts to 60% of viewport width
+            height: 25vh; // Dynamically adjusts to 25% of viewport height
+          }
+        
+        
     
         /* Subtle hover effect with glow */
-        &:hover {
-            transform: translateY(-3px); /* Slight lift */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow for interaction */
-            /*background: linear-gradient(135deg, #f6f6f6, #71428f); /* Reverse gradient */
-        }
     
         /* Decorative corner elements for modern look */
         &:before,
@@ -231,4 +237,5 @@
               }
         }
     }
+
 }

@@ -18,9 +18,30 @@
     letter-spacing: 0.5rem;
 
     @media (max-width: 768px) {
-      font-size: 2rem; // Slightly smaller title on smaller screens
+      font-size: 1.7rem; // Slightly smaller title on smaller screens
       word-spacing: 0.2rem;
       letter-spacing: 0.3rem;
+    }
+  }
+
+  .certificationList {
+    list-style: none; // Removes bullet points
+    padding: 0; // Removes default padding
+    margin: 0; // Removes default margin
+  
+    li {
+      margin-bottom: 10px; // Adds spacing between items
+      font-size: 0.7rem; // Adjust font size if necessary
+    }
+  
+    a {
+      color: #455CE9; // Link color
+      text-decoration: none;
+      font-weight: bold;
+  
+      &:hover {
+        text-decoration: underline; // Underline on hover
+      }
     }
   }
 
@@ -125,6 +146,7 @@
 
         p {
           color: #333; // Black text for descriptions
+          
         }
 
         a {
