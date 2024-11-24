@@ -16,10 +16,17 @@
     text-align: center;
     word-spacing: 0.3rem;
     letter-spacing: 0.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem; // Slightly smaller title on smaller screens
+      word-spacing: 0.2rem;
+      letter-spacing: 0.3rem;
+    }
   }
 
   .tabHeader {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     max-width: 1000px;
@@ -87,6 +94,10 @@
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); // Modern shadow
 
+    @media (max-width: 768px) {
+      padding: 15px; // Reduced padding for smaller screens
+    }
+
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -102,6 +113,10 @@
         text-align: center;
         //box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Softer shadow
         transition: transform 0.3s ease;
+
+        @media (max-width: 768px) {
+          max-width: 90%; // Full-width cards on smaller screens
+        }
 
         h3 {
           margin-top: 10px;
@@ -127,5 +142,10 @@
         }
       }
     }
+  }
+  @media (max-width: 768px) {
+    padding: 20px; // Reduced overall padding for smaller screens
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }

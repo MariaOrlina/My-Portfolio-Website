@@ -41,7 +41,7 @@
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 100; // Make sure it's above other content
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     transition: opacity 0.5s ease-in-out;
   }
@@ -84,12 +84,13 @@
   .sliderContainer {
     position: absolute;
     bottom: 10%;
+    text-align: center; 
   }
 
   .slider {
     position: relative;
     color: black; // Changed text to black for contrast
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     text-align: center;
     font-family: 'Courier New', Courier, monospace; // Typewriter-like font
@@ -124,5 +125,18 @@
     50% {
       border-color: purple; // Purple border while blinking
     }
+  }
+}
+@media (max-width: 768px) {
+  .sliderContainer {
+    bottom: 8%; // Adjusted position for smaller screens
+    .slider {
+      font-size: 1.5rem; // Smaller font size for mobile screens
+    }
+  }
+
+  .promptBanner {
+    font-size: 1rem; // Smaller font size for the banner
+    padding: 8px 15px; // Adjusted padding
   }
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 150px 50px;
+  padding: 150px 30px;
   background-color: #ffffff;
   margin-bottom: 100px;
   margin-top: 60px;
@@ -15,6 +15,13 @@
     text-align: center;
     word-spacing: 0.3rem;
     letter-spacing: 0.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem; // Slightly smaller title for tablets
+    }
+    @media (max-width: 480px) {
+      font-size: 1.8rem; // Smaller title for mobile screens
+    }
   }
 
   .tabHeader {
@@ -40,6 +47,11 @@
       box-shadow: 0 6px 1px rgba(0, 0, 0, 0.2); // Subtle 3D effect
       transition: all 0.3s ease;
       position: relative; // For glow effect
+
+      @media (max-width: 480px) {
+        font-size: 0.8rem; // Even smaller font for very small screens
+        padding: 8px 16px;
+      }
 
       &:hover {
         transform: translateY(-3px); // Lift on hover
@@ -87,6 +99,10 @@
       background: #455CE9;
       transform: translateX(-50%);
       z-index: 0;
+
+      @media (max-width: 480px) {
+        left: 20px; // Adjust the position for smaller screens
+      }
     }
   }
 
@@ -96,6 +112,24 @@
     justify-content: flex-start;
     margin-bottom: 50px;
     position: relative;
+
+    &:nth-child(odd),
+    &:nth-child(even) {
+      flex-direction: column; // Override alternating layout for small screens
+
+      .experienceItem {
+        margin: 0; // Remove alternating margin for small screens
+      }
+    }
+
+    @media (min-width: 768px) {
+      &:nth-child(odd) {
+        flex-direction: row-reverse; // Restore alternating layout for larger screens
+
+        .experienceItem {
+          margin-left: 30px;
+        }
+      }
 
     &:nth-child(odd) {
       flex-direction: row-reverse;
@@ -111,6 +145,7 @@
       }
     }
   }
+}
 
   .experienceItem {
     position: relative;
@@ -125,6 +160,15 @@
     display: flex;
     align-items: flex-start;
 
+    @media (max-width: 768px) {
+      padding: 15px; // Reduced padding for tablets
+    }
+
+    @media (max-width: 480px) {
+      padding: 10px; // Even smaller padding for mobile
+    }
+
+
     .timelineMarker {
       position: absolute;
       left: -32px;
@@ -134,6 +178,12 @@
       border-radius: 50%;
       background: #455CE9;
       z-index: 2;
+
+      @media (max-width: 480px) {
+        left: -12px; // Adjust marker position for smaller screens
+        height: 12px;
+        width: 12px;
+      }
     }
 
     .timelineContent {
@@ -143,23 +193,56 @@
         margin: 0;
         font-size: 1.6rem;
         color: #333;
+
+        @media (max-width: 768px) {
+          font-size: 1.4rem; // Slightly smaller font for tablets
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1.2rem; // Smaller font for mobile
+        }
+
       }
 
       h3 {
         margin: 5px 0;
         font-size: 1.2rem;
         color: #555;
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+        }
       }
 
       .duration {
         font-size: 1rem;
         color: #888;
         margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.8rem;
+        }
       }
 
       p {
         font-size: 1rem;
         color: #444;
+
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.8rem;
+        }
       }
     }
   }

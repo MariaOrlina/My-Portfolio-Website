@@ -1,5 +1,5 @@
 .description {
-    padding: 200px;
+    padding: 100px;
     margin-top: 50px;
     margin-bottom: 30px;
     display: flex;
@@ -15,8 +15,8 @@
         font-weight: bold;
         margin-bottom: 50px;
         color: #333;
-        word-spacing: 0.3rem;
-        letter-spacing: 0.5rem;
+        word-spacing: 0.2rem;
+        letter-spacing: 0.3rem;
     }
 
     .body {
@@ -81,13 +81,14 @@
     // Responsive styles
     @media (max-width: 1024px) {
         .body {
-            flex-direction: column; // Stack text and image vertically
+            flex-direction: row; // Stack text and image vertically
+            flex-wrap: wrap;
             gap: 20px;
 
             .textContent,
             .imageGrid {
                 width: 90%; // Reduce size for smaller screens
-                max-width: 400px;
+                max-width: 350px;
                 height: auto; // Maintain aspect ratio
             }
         }
@@ -95,6 +96,9 @@
 
     @media (max-width: 768px) {
         .body {
+            flex-direction: column; // Stack vertically for mobile devices
+            gap: 15px;
+
             .textContent,
             .imageGrid {
                 width: 100%; // Use full width on very small screens
@@ -102,11 +106,17 @@
             }
 
             .textContent {
-                padding: 20px;
+                padding: 15px;
                 p {
                     font-size: 1rem; // Slightly smaller text for smaller screens
+                    line-height: 1.4;
                 }
             }
         }
+        .title {
+            font-size: 2rem; // Reduced font size for smaller screens
+            word-spacing: 0.1rem;
+            letter-spacing: 0.2rem;
     }
+}
 }

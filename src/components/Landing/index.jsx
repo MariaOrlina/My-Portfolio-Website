@@ -15,7 +15,7 @@ export default function Home() {
   const [showContact, setShowContact] = useState(false); // Track contact button click
   const [showPrompt, setShowPrompt] = useState(true); // Track whether to show the user prompt
 
-  const roles = ['Software Engineer', 'Cloud Engineer', 'Site Reliability Engineer'];
+  const roles = ['Software Engineer', 'Cloud Engineer', 'Site Reliability Engineer', 'FullStack Engineer'];
 
   // Ensure this code runs only on the client side
   useEffect(() => {
@@ -66,6 +66,7 @@ export default function Home() {
       initial="initial"
       animate="enter"
       className={styles.landing}
+      tabIndex="0"
     >
       {/* Conditionally render the Spline component only on the client side */}
       {isClient && (

@@ -18,6 +18,14 @@
             font-size: 2.5rem;
             font-weight: bold;
             color: #333;
+
+            @media (max-width: 768px) {
+                font-size: 2rem; // Adjust font size for tablets
+            }
+
+            @media (max-width: 480px) {
+                font-size: 1.8rem; // Adjust font size for mobile
+            }
         }
     }
 
@@ -49,6 +57,21 @@
             position: relative;
             cursor: pointer;
 
+            @media (max-width: 1024px) {
+                width: 700px; // Adjust size for tablets
+                height: 500px;
+            }
+
+            @media (max-width: 768px) {
+                width: 500px; // Adjust size for small tablets
+                height: 400px;
+            }
+
+            @media (max-width: 480px) {
+                width: 300px; // Adjust size for mobile
+                height: 250px;
+            }
+
             .imageContainer {
                 position: relative;
                 width: 100%;
@@ -74,6 +97,14 @@
                     padding: 10px 15px;
                     font-size: 1.3rem; // Adjusted font size for better readability on larger cards
                     border-radius: 8px;
+
+                    @media (max-width: 768px) {
+                        font-size: 1rem; // Adjust title size for smaller screens
+                    }
+
+                    @media (max-width: 480px) {
+                        font-size: 0.9rem; // Smaller title size for mobile
+                    }
                 }
             }
         }
@@ -105,6 +136,14 @@
             width: 24px;
             height: 24px;
         }
+        @media (max-width: 480px) {
+            width: 40px; // Adjust button size for mobile
+            height: 40px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 
 
@@ -133,6 +172,15 @@
         svg {
             width: 24px;
             height: 24px;
+        }
+
+        @media (max-width: 480px) {
+            width: 40px; // Adjust button size for mobile
+            height: 40px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
     
@@ -178,11 +226,19 @@
             h3 {
                 margin-top: 0;
                 color: #333;
+
+                @media (max-width: 480px) {
+                    font-size: 1.2rem;
+                }
             }
 
             p {
                 color: #555;
                 margin-bottom: 15px;
+
+                @media (max-width: 480px) {
+                    font-size: 0.9rem;
+                }
             }
 
             a {

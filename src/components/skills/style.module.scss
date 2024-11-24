@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
     background-color: #ffffff;
     overflow: hidden;
 
@@ -14,6 +14,14 @@
         font-weight: bold;
         color: #333;
         text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 1.8rem; // Adjust title size for tablets
+          }
+      
+        @media (max-width: 480px) {
+            font-size: 1.5rem; // Smaller title size for mobile
+          }
     }
 
     .initialBox {
@@ -39,6 +47,14 @@
             color: #444; /* Slightly darker neutral tone for contrast */
             letter-spacing: 0.3px; /* Slight improvement in readability */
             text-transform: uppercase; /* Modern typography style */
+
+            @media (max-width: 768px) {
+                font-size: 1.2rem; // Smaller text for tablets
+              }
+        
+              @media (max-width: 480px) {
+                font-size: 1rem; // Even smaller text for mobile
+              }
         }
     
         /* Subtle hover effect with glow */
@@ -84,6 +100,15 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
+
+
+        @media (max-width: 768px) {
+            gap: 8px; // Reduced gap for smaller screens
+          }
+      
+          @media (max-width: 480px) {
+            gap: 5px; // Minimal gap for mobile
+          }
     }
 
     .skillBubble {
@@ -106,6 +131,17 @@
             transform: scale(1.1);
             box-shadow: 0 10px 30px rgba(105, 153, 255, 0.5);
         }
+        @media (max-width: 768px) {
+            width: 120px; // Smaller bubbles for tablets
+            height: 120px;
+            font-size: 0.9rem; // Adjust font size
+          }
+      
+        @media (max-width: 480px) {
+            width: 100px; // Smaller bubbles for mobile
+            height: 100px;
+            font-size: 0.8rem;
+          }
     }
 
     .skillDetail {
@@ -127,12 +163,27 @@
             font-weight: bold;
             color: #0a0b0a;
             margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 1.8rem; // Adjust title size for tablets
+              }
+            @media (max-width: 480px) {
+                font-size: 1.5rem; // Smaller title for mobile
+              }
         }
 
         p {
             font-size: 1rem;
             color: #666;
             margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 0.9rem; // Adjust font size for tablets
+              }
+        
+            @media (max-width: 480px) {
+                font-size: 0.8rem; // Smaller font for mobile
+              }
         }
 
         .toolsList {
@@ -148,6 +199,11 @@
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                 font-size: 0.9rem;
                 color: #333;
+            
+                @media (max-width: 480px) {
+                    padding: 5px 10px; // Adjust padding for mobile
+                    font-size: 0.8rem;
+                  }
             }
         }
 
@@ -164,6 +220,15 @@
             &:hover {
                 background-color: #334bd3;
             }
+            @media (max-width: 768px) {
+                padding: 8px 16px; // Adjust padding for tablets
+                font-size: 0.9rem;
+              }
+        
+            @media (max-width: 480px) {
+                padding: 6px 12px; // Adjust padding for mobile
+                font-size: 0.8rem;
+              }
         }
     }
 }
