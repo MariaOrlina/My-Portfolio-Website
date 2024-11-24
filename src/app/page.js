@@ -20,32 +20,28 @@ export default function Page() {
     let scrollInstance;
 
     const loadScroll = async () => {
-      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
 
-      // Initialize LocomotiveScroll
-      scrollInstance = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        smartphone: {
-          smooth: true,
-        },
-        tablet: {
-          smooth: true,
-        },
-      });
+        scrollInstance = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            smartphone: { smooth: true }, // Enable for smartphones
+            tablet: { smooth: true }, // Enable for tablets
+        });
 
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = 'default';
-      }, 2000);
+        setTimeout(() => {
+            setIsLoading(false); // Ensure preloader finishes
+            document.body.style.cursor = 'auto'; // Reset cursor
+        }, 2000);
     };
 
     loadScroll();
 
     return () => {
-      if (scrollInstance) scrollInstance.destroy(); // Clean up LocomotiveScroll
+        if (scrollInstance) scrollInstance.destroy(); // Clean up LocomotiveScroll
     };
-  }, []);
+}, []);
+
 
   return (
     <main className={styles.main} data-scroll-container>
