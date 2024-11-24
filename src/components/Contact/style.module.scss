@@ -7,7 +7,7 @@
     background-color: #000000;
     position: relative;
     overflow: hidden;
-    height: 600px; /* Default height */
+    min-height: 600px; /* Default height */
 
     .headline {
         position: absolute;
@@ -33,6 +33,13 @@
             height: 100%;
             object-fit: contain;
         }
+        @media (max-width: 768px) {
+            height: 60%; /* Reduce height for smaller screens */
+        }
+
+        @media (max-width: 480px) {
+            height: 50%; /* Further reduce height for mobile screens */
+        }
     }
 
     .watermarkCover {
@@ -44,6 +51,11 @@
         background-color: #030202;
         z-index: 2;
         border-radius: 15px;
+
+        @media (max-width: 480px) {
+            width: 100px; /* Further smaller size */
+            height: 40px;
+        }
     }
 
     .body {
@@ -71,6 +83,14 @@
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 text-fill-color: transparent;
+
+                @media (max-width: 768px) {
+                    font-size: 1.5rem; /* Adjust for tablets */
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 1.2rem; /* Smallest size for mobile */
+                }
             }
         }
 
@@ -88,6 +108,14 @@
 
                 &:hover {
                     color: #ffffff;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 1.5rem; /* Reduce icon size for tablets */
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 1.2rem; /* Smallest size for mobile */
                 }
             }
         }
@@ -130,10 +158,11 @@
     }
 
     @media (max-width: 768px) {
-        height: auto;
+        height: auto; /* Adjust height for content */
+        min-height: 400px; /* Ensure section is not too small */
 
         .splineWrapper {
-            height: 60%; /* Adjust for smaller screens */
+            height: 60%; /* Adjust height for tablets */
         }
 
         .body {
@@ -142,38 +171,39 @@
             padding: 10px;
 
             .leftText h2 {
-                font-size: 1.8rem; /* Reduce text size further */
+                font-size: 1.5rem; /* Adjust text size */
             }
 
             .rightIcons {
                 gap: 10px;
 
                 a {
-                    font-size: 1.5rem; /* Adjust icon size further */
+                    font-size: 1.5rem; /* Adjust icon size */
                 }
             }
         }
     }
 
     @media (max-width: 480px) {
-        height: auto;
+        height: auto; /* Let content dictate height */
+        min-height: 350px; /* Prevent shrinking */
 
         .splineWrapper {
-            height: 50%; /* Adjust height for very small screens */
+            height: 50%; /* Adjust Spline height for mobile */
         }
 
         .body {
             padding: 10px;
 
             .leftText h2 {
-                font-size: 1.5rem; /* Smallest text size */
+                font-size: 1.2rem; /* Smaller text size */
             }
 
             .rightIcons {
                 gap: 8px;
 
                 a {
-                    font-size: 1.3rem; /* Adjust icon size */
+                    font-size: 1.2rem; /* Adjust icon size */
                 }
             }
         }

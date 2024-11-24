@@ -164,6 +164,13 @@
         text-align: center;
         z-index: 3;
 
+        @media (max-width: 480px) {
+            left: 10%; // Move to the left side of the screen
+            transform: translate(0, 0); // Remove center alignment only for mobile
+            width: 60%; // Smaller size for mobile screens
+            padding: 15px; // Adjusted padding for compact appearance
+        }
+
         h3 {
             font-size: 2rem;
             font-weight: bold;
@@ -207,9 +214,9 @@
                 color: #333;
             
                 @media (max-width: 480px) {
-                    padding: 5px 10px; // Adjust padding for mobile
-                    font-size: 0.8rem;
-                  }
+                    padding: 2px 8px; // Adjust padding for mobile
+                    font-size: 0.6rem; // Smaller font for mobile
+                }
             }
         }
 
