@@ -5,8 +5,7 @@ import { slideInFromLeft, slideInFromRight } from './animation';
 import Image from 'next/image';
 
 export default function About() {
-    const phrase = `Hey there! I’m Maria Orlina, a tech enthusiast driven by innovation and creativity. My journey began with a spark of curiosity that grew into a passion for building, learning, and problem-solving. With a background in computer science and experience in software engineering and solution architecture, I’ve developed expertise in programming, cloud computing, and system design. I love tackling challenges, whether it’s creating seamless user experiences, optimizing performance, or designing scalable systems. Beyond coding, I’m committed to continuous learning and staying at the forefront of technology. Outside of tech, I enjoy collaborating, brainstorming new ideas, and mentoring others. I believe true innovation blends knowledge, passion, and a touch of fun.`;
-
+    const phrase = `Hey there! I’m Maria Orlina, a tech enthusiast who thrives on exploring the crossroads of creativity and technology. Whether it’s building scalable systems, creating seamless user experiences, or diving into cloud computing, I embrace challenges that push the boundaries of innovation. I’m passionate about crafting seamless systems, optimizing performance, and building for the future. Let’s make ideas come alive!`;
     const description = useRef(null);
     const isInView = useInView(description);
 
