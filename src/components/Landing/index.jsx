@@ -27,11 +27,15 @@ export default function Home() {
       gsap.registerPlugin(ScrollTrigger);
 
       // Upward animation for the name
-      gsap.fromTo(
+      const animation = gsap.fromTo(
         textRef.current,
         { y: 200, opacity: 0 },
         { y: 0, opacity: 1, duration: 2, ease: 'power4.out' }
       );
+      return () => {
+        animation.kill(); // Kill the animation
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Remove all ScrollTriggers
+      };
     }
   }, []);
 

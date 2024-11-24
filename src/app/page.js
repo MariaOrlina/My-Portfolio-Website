@@ -19,20 +19,30 @@ export default function Page() {
   useEffect(() => {
     const loadScroll = async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      new LocomotiveScroll();
+      new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'), // Connect LocomotiveScroll to this container
+        smooth: true, // Enable smooth scrolling
+        smartphone: {
+          smooth: true, // Enable smooth scrolling on smartphones
+        },
+        tablet: {
+          smooth: true, // Enable smooth scrolling on tablets
+        },
+      });
 
       setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = 'default';
-        window.scrollTo(0, 0);
+        setIsLoading(false); // Hide the preloader
+        document.body.style.cursor = 'default'; // Reset the cursor
+        window.scrollTo(0, 0); // Scroll to the top
       }, 2000);
     };
 
     loadScroll();
   }, []);
 
+
   return (
-    <main className={styles.main}>
+    <main className={styles.main} data-scroll-container>
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
