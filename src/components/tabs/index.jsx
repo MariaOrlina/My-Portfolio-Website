@@ -74,7 +74,6 @@ export default function MyActivities() {
             <motion.div className={styles.card}>
               <FiBookOpen size={40} color='black'/>
               <h3>Certified in AWS, Azure, GCP &amp; Terraform</h3>
-              <p>Below are the certifications I have achieved along with links to verify them:</p>
               <ul className={styles.certificationList}>
                 <li>
                   <a href="https://www.credly.com/badges/7740d441-5816-497d-ac29-bb7a44ba8aab/public_url" target="_blank" rel="noopener noreferrer">
