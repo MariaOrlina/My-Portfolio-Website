@@ -21,7 +21,7 @@ const experiences = [
     description: "Provided guidance on assignments, developed instructional material for GCP operations, and offered system troubleshooting support.",
   },
   {
-    role: "Software Engineer Intern",
+    role: "Software Engineer",
     company: "Technocolabs",
     duration: "March 2021 - April 2022",
     description: "Built data pipelines, predictive models, and data visualizations for improving data-driven decision-making processes.",
