@@ -23,7 +23,7 @@ const experiences = [
   {
     role: "Software Engineer Intern",
     company: "Technocolabs",
-    duration: "January 2023 - April 2023",
+    duration: "March 2021 - April 2022",
     description: "Built data pipelines, predictive models, and data visualizations for improving data-driven decision-making processes.",
   },
   {
@@ -39,13 +39,13 @@ const education = [
     role: "Master of Science in Computer Science",
     institution: "Illinois Institute of Technology",
     duration: "August 2022 - May 2024",
-    description: "Specialized in Cloud Computing, Artificial Intelligence, and Software Development.",
+    description: "Focussed Cloud Computing, Artificial Intelligence, Informaiton Security and Software Development. Graduated with a GPA of 3.8.",
   },
   {
     role: "Bachelor of Technology in Information Technology",
     institution: "Andhra University",
     duration: "August 2018 - May 2022",
-    description: "Focused on Computer Networks, Data Structures, and Database Management Systems.",
+    description: "Focused on Computer Networks, Data Structures, and Database Management Systems. Graduated with a GPA of 3.4.",
   },
 ];
 
