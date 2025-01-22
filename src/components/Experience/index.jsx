@@ -11,7 +11,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Bright Minds Enrichment",
-    duration: "June 2024 - Present",
+    duration: "Dec 2023 - Present",
     description: "Led the development and integration of cross-application features, enhancing user experience and system performance.",
   },
   {
@@ -23,7 +23,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Technocolabs",
-    duration: "March 2021 - April 2022",
+    duration: "May 2020 - April 2022",
     description: "Built data pipelines, predictive models, and data visualizations for improving data-driven decision-making processes.",
   },
   {
