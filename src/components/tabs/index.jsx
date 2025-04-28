@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FiGithub, FiCloud, FiBookOpen, FiCode } from 'react-icons/fi';
 
 export default function MyActivities() {
-  const [activeTab, setActiveTab] = useState('Open Source Contributions');
+  const [activeTab, setActiveTab] = useState('Certifications');
 
   const tabs = [
     { name: 'Certifications', icon: <FiBookOpen /> },
