@@ -63,7 +63,7 @@ export default function MyActivities() {
               <h3>Research Papers Published</h3>
               <p>Authored and published peer-reviewed research papers on Agile Data Science practices and the application of emerging technologies like IoT, Machine Learning, and Psychoinformatics in healthcare. These works explore innovative methodologies to enhance software development processes and healthcare services through technology-driven solutions.</p>
               <a href="https://drive.google.com/drive/folders/1hBA8liG2mmGmqqHIsXLVm9iQMYtCRQzy" rel="noopener noreferrer">
-                View Project
+                View Papers
               </a>
             </motion.div>
           </div>
