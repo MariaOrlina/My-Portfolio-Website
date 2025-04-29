@@ -11,7 +11,7 @@ export default function MyActivities() {
     { name: 'Recent Articles', icon: <FiBookOpen /> },
     { name: 'Coding Challenges', icon: <FiCode /> },
     { name: 'Open Source Contributions', icon: <FiGithub /> },
-    { name: 'Paper Published', icon: <FiFileText /> },
+    { name: 'Paper Published', icon: <FiBookOpen /> },
   ];
 
   const renderContent = () => {
@@ -58,8 +58,8 @@ export default function MyActivities() {
       case 'Paper Published':
         return (
           <div className={styles.cards}>
-            <motion.div className={styles.card}>
-              <FiFileText size={40} color='black'/>
+            <motion.div className={styles.cardz}>
+              <FiBookOpen size={40} color='black'/>
               <h3>Research Papers Published</h3>
               <p>Authored and published peer-reviewed research papers on Agile Data Science practices and the application of emerging technologies like IoT, Machine Learning, and Psychoinformatics in healthcare. These works explore innovative methodologies to enhance software development processes and healthcare services through technology-driven solutions.</p>
               <a href="https://drive.google.com/drive/folders/1hBA8liG2mmGmqqHIsXLVm9iQMYtCRQzy" rel="noopener noreferrer">
