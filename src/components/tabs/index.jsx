@@ -11,7 +11,7 @@ export default function MyActivities() {
     { name: 'Recent Articles', icon: <FiBookOpen /> },
     { name: 'Coding Challenges', icon: <FiCode /> },
     { name: 'Open Source Contributions', icon: <FiGithub /> },
-    { name: 'Cloud Projects', icon: <FiCloud /> },
+    { name: 'Paper Published', icon: <FiFileText /> },
   ];
 
   const renderContent = () => {
@@ -55,14 +55,14 @@ export default function MyActivities() {
             </motion.div>
           </div>
         );
-      case 'Cloud Projects':
+      case 'Paper Published':
         return (
           <div className={styles.cards}>
             <motion.div className={styles.card}>
-              <FiCloud size={40} color='black'/>
-              <h3>Project: AWS Lambda Automation</h3>
-              <p>Built a serverless cloud function to automate data processing tasks.</p>
-              <a href="https://github.com/MariaOrlina/Cloud-Portfolio" target="_blank" rel="noopener noreferrer">
+              <FiFileText size={40} color='black'/>
+              <h3>Research Papers Published</h3>
+              <p>Authored and published peer-reviewed research papers on Agile Data Science practices and the application of emerging technologies like IoT, Machine Learning, and Psychoinformatics in healthcare. These works explore innovative methodologies to enhance software development processes and healthcare services through technology-driven solutions.</p>
+              <a href="https://drive.google.com/drive/folders/1hBA8liG2mmGmqqHIsXLVm9iQMYtCRQzy" rel="noopener noreferrer">
                 View Project
               </a>
             </motion.div>
