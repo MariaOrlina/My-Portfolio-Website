@@ -9,28 +9,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
-    role: "Software Engineer",
-    company: "Bright Minds Enrichment",
-    duration: "Dec 2023 - Present",
-    description: "Led the development and integration of cross-application features, enhancing user experience and system performance.",
-  },
-  {
-    role: "Graduate Teaching Assistant",
-    company: "Illinois Institute of Technology",
-    duration: "August 2023 - May 2024",
-    description: "Provided guidance on assignments, developed instructional material for GCP operations, and offered system troubleshooting support.",
+    role: "Java FullStack Developer",
+    company: "Bank of America",
+    duration: "May 2025 - Present",
+    description: "I design and operate cloud-native, distributed Java/Spring Boot services on Kubernetes/OpenShift that power secure secrets and vault management for internal platforms. My work spans high-reliability REST APIs, OAuth2/OIDC security, data performance tuning across MongoDB/DB2/Oracle/Graph DB, and front-end admin tools in React/Angular, with measurable improvements in latency, stability, and operational efficiency.",
   },
   {
     role: "Software Engineer",
-    company: "Technocolabs",
+    company: "Walmart",
+    duration: "June 2024 - April 2025",
+    description: "I worked on large-scale order orchestration and real-time inventory systems using Java/Spring Boot microservices on Kubernetes/OpenShift, focusing on checkout performance, reliability, and clean API contracts (REST and GraphQL) for internal and partner teams. I also built React/Angular dashboards for store associates and prototyped an LLM-assisted support tool, reducing manual workflows and improving resolution times for store and e-commerce operations.",
+  },
+  {
+    role: "Software Engineer",
+    company: "Optum",
     duration: "May 2020 - April 2022",
-    description: "Built data pipelines, predictive models, and data visualizations for improving data-driven decision-making processes.",
-  },
-  {
-    role: "Product Engineer Intern",
-    company: "Upkey",
-    duration: "August 2020 - November 2020",
-    description: "Participated in product development, feature enhancements, and code review processes, contributing to agile team efforts.",
+    description: "I contributed to healthcare platforms by building and optimizing Java/Spring Boot services around claims and eligibility, including FHIR-based APIs and high-throughput EDI processing pipelines. I collaborated across teams to ship Angular/TypeScript portals, tune MongoDB and Oracle performance, and ensure HIPAA-compliant, reliable systems that handle sensitive healthcare data at scale.",
   },
 ];
 
