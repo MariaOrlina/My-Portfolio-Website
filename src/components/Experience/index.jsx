@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
-    role: "Java FullStack Developer",
+    role: "Software Developer",
     company: "Bank of America",
     duration: "May 2025 - Present",
     description: "I design and operate cloud-native, distributed Java/Spring Boot services on Kubernetes/OpenShift that power secure secrets and vault management for internal platforms. My work spans high-reliability REST APIs, OAuth2/OIDC security, data performance tuning across MongoDB/DB2/Oracle/Graph DB, and front-end admin tools in React/Angular, with measurable improvements in latency, stability, and operational efficiency.",
