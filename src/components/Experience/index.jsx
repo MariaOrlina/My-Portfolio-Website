@@ -16,7 +16,7 @@ const experiences = [
   },
   {
     role: "Software Engineer",
-    company: "Walmart",
+    company: "Bright Mind Enrichment and Schooling",
     duration: "June 2024 - April 2025",
     description: "At Walmart, I worked on high-traffic Java/Spring Boot microservices for order orchestration and real-time inventory on Kubernetes (OpenShift), handling around 1.8K requests per second while significantly reducing checkout latency and order failures through better caching and database patterns. I built and documented REST and GraphQL APIs (Swagger/OpenAPI, Postman, Pact) that improved integration success and sped up partner onboarding, and implemented OAuth2/OIDC, RBAC, rate limiting, and audit logging to harden security across store and e-commerce tools. On the frontend side, I developed React and Angular dashboards that replaced manual spreadsheets and helped store associates manage inventory exceptions and curbside pickup more efficiently. I also prototyped an LLM-powered, guardrailed assistant using LangChain and retrieval over de-identified policies and playbooks, improving first-contact resolution in UAT while keeping latency under a second.",
   },
